@@ -5,6 +5,7 @@ import com.builtbroken.jlib.lang.EnglishLetters;
 import com.builtbroken.mc.api.entity.IFoF;
 import com.builtbroken.mc.api.tile.IFoFProvider;
 import com.builtbroken.mc.api.tile.access.IGuiTile;
+import com.builtbroken.mc.api.tile.access.IRotation;
 import com.builtbroken.mc.codegen.annotations.MultiBlockWrapped;
 import com.builtbroken.mc.codegen.annotations.TileWrapped;
 import com.builtbroken.mc.core.network.packet.PacketType;
@@ -24,6 +25,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.StringUtils;
+import net.minecraftforge.common.util.ForgeDirection;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +38,7 @@ import java.util.List;
  */
 @TileWrapped(className = "TileWrappedFoF")
 @MultiBlockWrapped()
-public class TileFoF extends TileMachineNode implements IGuiTile, IFoFProvider, IProfileContainer
+public class TileFoF extends TileMachineNode implements IGuiTile, IFoFProvider, IProfileContainer, IRotation
 {
     /** Main ID used for FoF system */
     protected String userFoFID;
@@ -50,6 +52,8 @@ public class TileFoF extends TileMachineNode implements IGuiTile, IFoFProvider, 
 
     /** Client var */
     public boolean hasProfile = false;
+
+    private ForgeDirection rotationCache;
 
     public TileFoF()
     {
@@ -427,5 +431,15 @@ public class TileFoF extends TileMachineNode implements IGuiTile, IFoFProvider, 
     public void onPostInit()
     {
         //GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ICBM.blockFoFStation), "RCR", "PRP", 'C', InventoryUtility.getBlock("icbm:silocontroller"), 'R', UniversalRecipe.CIRCUIT_T2.get(), 'P', UniversalRecipe.PRIMARY_PLATE.get()));
+    }
+
+    @Override
+    public ForgeDirection getDirection()
+    {
+        if (rotationCache == null)
+        {
+            rotationCache = ForgeDirection.getOrientation(getHost().getHostMeta()).getOpposite();
+        }
+        return rotationCache;
     }
 }
