@@ -6,13 +6,21 @@
     "name": "sentry.ams",
     "id": "sentryaa:sentry.ams",
     "gunID": "sentryaa:sentry.ams",
-    "healthValue":40,
+    "healthValue": 40,
     "bodyWidth": 0.8,
     "bodyHeight": 0.8,
     "barrelLength": 0.6,
+    "targetRange": 120,
+    "rotationSpeed": 20,
     "centerOffset": {
       "y": 0
-    }
+    },
+    "defaultTargetTypes": [
+      "missile"
+    ],
+    "allowedTargetTypes": [
+      "missile"
+    ]
   },
   "gun": {
     "name": "sentry",
@@ -21,8 +29,8 @@
     "ammoType": "20x100mm",
     "reloadType": "CLIP",
     "fallOff": "0.05D",
-    "rateOfFire": 60,
-    "reloadTime": 20
+    "rateOfFire": 1200,
+    "reloadTime": 100
   },
   "audio:1": {
     "key": "sentryaa:sentry.ams.empty",

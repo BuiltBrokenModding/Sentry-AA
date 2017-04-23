@@ -14,6 +14,9 @@
         "id": "entity.sentry.yaw",
         "modelID": "sentryaa:ams-bot",
         "textureID": "sentryaa:ams-model",
+        "rotation": {
+          "yaw": 90
+        },
         "offset": {
           "y": -0.3
         }
@@ -22,6 +25,9 @@
         "id": "entity.sentry.pitch",
         "modelID": "sentryaa:ams-top",
         "textureID": "sentryaa:ams-model",
+        "rotation": {
+          "yaw": 90
+        },
         "offset": {
           "y": 0.2
         }
