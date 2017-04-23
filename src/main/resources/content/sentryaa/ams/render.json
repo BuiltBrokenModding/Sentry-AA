@@ -1,0 +1,53 @@
+{
+  "author": {
+    "name": "sentryaa"
+  },
+  "render": {
+    "contentID": "sentryaa:sentry.ams",
+    "type": "gun",
+    "states": [
+      {
+        "id": "item.inventory",
+        "textureID": "sentryaa:ams"
+      },
+      {
+        "id": "entity.sentry.yaw",
+        "modelID": "sentryaa:ams-bot",
+        "textureID": "sentryaa:ams-model",
+        "offset": {
+          "y": -0.3
+        }
+      },
+      {
+        "id": "entity.sentry.pitch",
+        "modelID": "sentryaa:ams-top",
+        "textureID": "sentryaa:ams-model",
+        "offset": {
+          "y": 0.2
+        }
+      }
+    ]
+  },
+  "texture": {
+    "key": "sentryaa:ams",
+    "domain": "sentryaa",
+    "name": "turret_aa",
+    "type": "item"
+  },
+  "texture:1": {
+    "key": "sentryaa:ams-model",
+    "domain": "sentryaa",
+    "name": "AMS",
+    "type": "model"
+  },
+  "model": {
+    "key": "sentryaa:ams-bot",
+    "domain": "sentryaa",
+    "name": "AMS-bottom.obj"
+  },
+  "model:1": {
+    "key": "sentryaa:ams-top",
+    "domain": "sentryaa",
+    "name": "AMS-top.obj"
+  }
+}

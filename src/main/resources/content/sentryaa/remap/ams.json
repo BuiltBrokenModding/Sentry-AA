@@ -1,0 +1,19 @@
+{
+  "author": {
+    "name": "sentryaa"
+  },
+  "block": {
+    "name": "amsremap",
+    "id": "amsremap",
+    "mod": "sentryaa",
+    "material": "iron",
+    "tileEntity": {
+      "id": "amsremap",
+      "class": "com.builtbroken.sentryaa.content.remap.TileWrapperAmsRemap"
+    }
+  },
+  "missingMappingEvent": {
+    "oldValue": "icbm:ICBMxAMS",
+    "newValue": "sentryaa:amsremap"
+  }
+}

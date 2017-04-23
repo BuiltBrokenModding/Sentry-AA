@@ -1,0 +1,36 @@
+{
+  "author": {
+    "name": "sentryaa"
+  },
+  "sentry": {
+    "name": "sentry.ams",
+    "id": "sentryaa:sentry.ams",
+    "gunID": "sentryaa:sentry.ams",
+    "healthValue":40,
+    "bodyWidth": 0.8,
+    "bodyHeight": 0.8,
+    "barrelLength": 0.6,
+    "centerOffset": {
+      "y": 0
+    }
+  },
+  "gun": {
+    "name": "sentry",
+    "gunType": "sentry",
+    "ID": "sentryaa:sentry.ams",
+    "ammoType": "20x100mm",
+    "reloadType": "CLIP",
+    "fallOff": "0.05D",
+    "rateOfFire": 60,
+    "reloadTime": 20
+  },
+  "audio:1": {
+    "key": "sentryaa:sentry.ams.empty",
+    "domain": "armory",
+    "name": "gun.empty"
+  },
+  "effect:1": {
+    "key": "sentryaa:sentry.ams.round.fired",
+    "effectID": "armory:gunSmoke"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "author": {
+    "name": "sentryaa"
+  },
+  "block": {
+    "name": "fofstation",
+    "id": "fofstation",
+    "mod": "sentryaa",
+    "material": "iron",
+    "hardness": 15,
+    "resistance": 50,
+    "renderType": -1,
+    "isOpaque": false,
+    "tileEntity": {
+      "id": "fofstation",
+      "class": "com.builtbroken.sentryaa.content.fof.TileWrappedFoF"
+    },
+    "renderBounds": {
+      "min": 0,
+      "max": {
+        "x": 1,
+        "y": 3,
+        "z": 1
+      }
+    },
+    "listeners": [
+      "rotation",
+      {
+        "id": "multiblock",
+        "layoutKey": "sentryaa:fofstation"
+      }
+    ]
+  },
+  "missingMappingEvent": {
+    "oldValue": "icbm:ICBMxFoF",
+    "newValue": "sentryaa:fofstation"
+  },
+  "multiblock": {
+    "key": "sentryaa:fofstation",
+    "tiles": [
+      {
+        "pos": {
+          "y": 1
+        }
+      }
+    ]
+  }
+}

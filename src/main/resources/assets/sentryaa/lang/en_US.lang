@@ -1,0 +1,6 @@
+itemGroup.sentryaa=AA & AMS Sentries
+
+tile.sentryaa:fofstation.name=FoF Station
+tile.sentryaa:fofstation.info=Provides a shared ID, to prevent friendly fire
+
+sentry.sentryaa:sentry.ams.name=AMS Sentry

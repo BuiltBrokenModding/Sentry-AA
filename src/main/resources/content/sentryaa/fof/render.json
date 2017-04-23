@@ -1,0 +1,63 @@
+{
+  "author": {
+    "name": "sentryaa"
+  },
+  "render": {
+    "contentID": "sentryaa:fofstation",
+    "type": "tile",
+    "tileClass": "com.builtbroken.sentryaa.content.fof.TileWrappedFoF",
+    "states": [
+      {
+        "id": "item.inventory",
+        "textureID": "sentryaa:fofstation"
+      },
+      {
+        "id": "tile",
+        "modelID": "sentryaa:fofstation",
+        "textureID": "sentryaa:fofstation",
+        "offset": {
+          "y": 0.5
+        }
+      },
+      {
+        "id": "tile.north",
+        "parent": "tile",
+        "rotation": {
+          "yaw": 90
+        }
+      },
+      {
+        "id": "tile.south",
+        "parent": "tile",
+        "rotation": {
+          "yaw": -90
+        }
+      },
+      {
+        "id": "tile.west",
+        "parent": "tile",
+        "rotation": {
+          "yaw": 180
+        }
+      },
+      {
+        "id": "tile.east",
+        "parent": "tile",
+        "rotation": {
+          "yaw": 0
+        }
+      }
+    ]
+  },
+  "texture": {
+    "key": "sentryaa:fofstation",
+    "domain": "sentryaa",
+    "name": "console-fof",
+    "type": "model"
+  },
+  "model": {
+    "key": "sentryaa:fofstation",
+    "domain": "sentryaa",
+    "name": "fofstation.obj"
+  }
+}
