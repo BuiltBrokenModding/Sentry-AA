@@ -272,7 +272,7 @@ public class TileFoF extends TileMachineNode implements IGuiTile, IFoFProvider, 
         {
             if (!StringUtils.isNullOrEmpty(globalProfileID))
             {
-                profile = GlobalAccessSystem.getOrCreateProfile(globalProfileID, true);
+                profile = GlobalAccessSystem.getProfile(globalProfileID);
             }
             else
             {
