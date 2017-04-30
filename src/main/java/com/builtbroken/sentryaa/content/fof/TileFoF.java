@@ -10,6 +10,9 @@ import com.builtbroken.mc.codegen.annotations.MultiBlockWrapped;
 import com.builtbroken.mc.codegen.annotations.TileWrapped;
 import com.builtbroken.mc.core.network.packet.PacketType;
 import com.builtbroken.mc.framework.access.*;
+import com.builtbroken.mc.framework.access.api.IProfileContainer;
+import com.builtbroken.mc.framework.access.global.GlobalAccessSystem;
+import com.builtbroken.mc.framework.access.perm.Permissions;
 import com.builtbroken.mc.prefab.gui.ContainerDummy;
 import com.builtbroken.mc.prefab.inventory.ExternalInventory;
 import com.builtbroken.mc.prefab.tile.logic.TileMachineNode;
@@ -391,16 +394,6 @@ public class TileFoF extends TileMachineNode implements IGuiTile, IFoFProvider, 
     @Override
     public void setAccessProfile(AccessProfile profile)
     {
-        if (this.profile != null)
-        {
-            this.profile.removeContainer(this);
-        }
-
-        this.profile = profile;
-        if (profile != null)
-        {
-            profile.addContainer(this);
-        }
     }
 
     @Override
