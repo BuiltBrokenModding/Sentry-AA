@@ -8,10 +8,12 @@
     "states": [
       {
         "id": "item.inventory",
+        "renderType":"item",
         "textureID": "sentryaa:ams"
       },
       {
         "id": "entity.sentry.yaw",
+        "renderType":"model",
         "modelID": "sentryaa:ams-bot",
         "textureID": "sentryaa:ams-model",
         "rotation": {
@@ -23,6 +25,7 @@
       },
       {
         "id": "entity.sentry.pitch",
+        "renderType":"model",
         "modelID": "sentryaa:ams-top",
         "textureID": "sentryaa:ams-model",
         "rotation": {
