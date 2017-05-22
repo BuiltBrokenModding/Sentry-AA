@@ -26,6 +26,7 @@
     "name": "sentry",
     "gunType": "sentry",
     "ID": "sentryaa:sentry.ams",
+    "showInCreativeTab": false,
     "ammoType": "20x100mm",
     "reloadType": "CLIP",
     "fallOff": "0.05D",

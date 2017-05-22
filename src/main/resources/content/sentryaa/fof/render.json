@@ -9,10 +9,12 @@
     "states": [
       {
         "id": "item.inventory",
+        "renderType":"item",
         "textureID": "sentryaa:fofstation"
       },
       {
         "id": "tile",
+        "renderType":"model",
         "modelID": "sentryaa:fofstation",
         "textureID": "sentryaa:fofstation",
         "offset": {
@@ -21,6 +23,7 @@
       },
       {
         "id": "tile.north",
+        "renderType":"model",
         "parent": "tile",
         "rotation": {
           "yaw": 90
@@ -28,6 +31,7 @@
       },
       {
         "id": "tile.south",
+        "renderType":"model",
         "parent": "tile",
         "rotation": {
           "yaw": -90
@@ -35,6 +39,7 @@
       },
       {
         "id": "tile.west",
+        "renderType":"model",
         "parent": "tile",
         "rotation": {
           "yaw": 180
@@ -42,6 +47,7 @@
       },
       {
         "id": "tile.east",
+        "renderType":"model",
         "parent": "tile",
         "rotation": {
           "yaw": 0

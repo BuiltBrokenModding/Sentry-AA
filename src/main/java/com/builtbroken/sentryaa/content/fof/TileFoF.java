@@ -218,7 +218,7 @@ public class TileFoF extends TileMachineNode implements IGuiTile, IFoFProvider, 
                             }
                             catch (NumberFormatException e)
                             {
-
+                                //TODO post error
                             }
                         }
                         gui.setMessage(renderString);
