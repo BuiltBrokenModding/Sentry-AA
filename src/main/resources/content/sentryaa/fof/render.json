@@ -10,7 +10,7 @@
       {
         "id": "item.inventory",
         "renderType":"item",
-        "textureID": "sentryaa:fofstation"
+        "textureID": "sentryaa:fofStationItem"
       },
       {
         "id": "tile",
@@ -55,7 +55,14 @@
       }
     ]
   },
-  "texture": {
+  "texture":
+  {
+    "key":"sentryaa:fofStationItem",
+    "domain": "sentryaa",
+    "name": "fofstation",
+    "type": "item"
+  },
+  "texture:1": {
     "key": "sentryaa:fofstation",
     "domain": "sentryaa",
     "name": "console-fof",

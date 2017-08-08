@@ -16,10 +16,12 @@
       "y": 0
     },
     "defaultTargetTypes": [
-      "missile"
+      "missile",
+      "rockets"
     ],
     "allowedTargetTypes": [
-      "missile"
+      "missile",
+      "rockets"
     ]
   },
   "gun": {
