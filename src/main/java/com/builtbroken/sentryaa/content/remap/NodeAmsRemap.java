@@ -36,8 +36,8 @@ public class NodeAmsRemap extends TileNode
         if (ams != null)
         {
             //TODO remap
-            world().setBlock(xi(), yi(), zi(), Armory.blockSentry);
-            TileEntity tile = world().getTileEntity(xi(), yi(), zi());
+            world().setTile(Armory.SENTRY_BLOCK_REG, xi(), yi(), zi());
+            TileEntity tile = world().unwrap().getTileEntity(xi(), yi(), zi());
             if (tile instanceof TileSentry)
             {
                 ((TileSentry) tile).setSentryStack(new ItemStack(Armory.blockSentry, 1, ams.meta));

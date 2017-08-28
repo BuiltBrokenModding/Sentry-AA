@@ -10,7 +10,7 @@ package com.builtbroken.sentryaa.content.remap;
 
 import com.builtbroken.sentryaa.content.remap.NodeAmsRemap;
 import com.builtbroken.mc.api.tile.node.ITileNode;
-import com.builtbroken.mc.framework.logic.wrapper.TileEntityWrapper;
+import com.builtbroken.mc.seven.framework.logic.TileEntityWrapper;
 
 public class TileWrapperAmsRemap extends TileEntityWrapper
 {

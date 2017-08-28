@@ -6,10 +6,10 @@ import com.builtbroken.mc.api.entity.IFoF;
 import com.builtbroken.mc.api.tile.IFoFProvider;
 import com.builtbroken.mc.api.tile.access.IGuiTile;
 import com.builtbroken.mc.api.tile.access.IRotation;
-import com.builtbroken.mc.codegen.annotations.MultiBlockWrapped;
 import com.builtbroken.mc.codegen.annotations.TileWrapped;
 import com.builtbroken.mc.core.network.packet.PacketType;
-import com.builtbroken.mc.framework.access.*;
+import com.builtbroken.mc.framework.access.AccessProfile;
+import com.builtbroken.mc.framework.access.AccessUser;
 import com.builtbroken.mc.framework.access.api.IProfileContainer;
 import com.builtbroken.mc.framework.access.global.GlobalAccessSystem;
 import com.builtbroken.mc.framework.access.perm.Permissions;
@@ -39,8 +39,7 @@ import java.util.List;
  * @see <a href="https://github.com/BuiltBrokenModding/VoltzEngine/blob/development/license.md">License</a> for what you can and can't do with the code.
  * Created by Dark(DarkGuardsman, Robert) on 3/9/2016.
  */
-@TileWrapped(className = "TileWrappedFoF")
-@MultiBlockWrapped()
+@TileWrapped(className = "TileWrappedFoF", wrappers = "MultiBlock")
 public class TileFoF extends TileMachineNode implements IGuiTile, IFoFProvider, IProfileContainer, IRotation
 {
     /** Main ID used for FoF system */
@@ -94,14 +93,14 @@ public class TileFoF extends TileMachineNode implements IGuiTile, IFoFProvider, 
     {
         String string = "";
         //Generate random default string
-        int[] l = MathHelper.generateRandomIntArray(world().rand, EnglishLetters.values().length + 9, 10 + world().rand.nextInt(20));
+        int[] l = MathHelper.generateRandomIntArray(world().unwrap().rand, EnglishLetters.values().length + 9, 10 + world().unwrap().rand.nextInt(20));
         for (int i : l)
         {
             if (i < 10)
             {
                 string += i;
             }
-            else if (world().rand.nextBoolean())
+            else if (world().unwrap().rand.nextBoolean())
             {
                 string += EnglishLetters.values()[i - 10].name();
             }
@@ -252,12 +251,12 @@ public class TileFoF extends TileMachineNode implements IGuiTile, IFoFProvider, 
 
     protected void sendFoFIDChange(String change, boolean archive)
     {
-        sendPacket(getHost().getPacketForData(2, change != null ? change : "", archive));
+        sendPacketToClient(getHost().getPacketForData(2, change != null ? change : "", archive));
     }
 
     protected void sendEnablePermissions(boolean b)
     {
-        sendPacket(getHost().getPacketForData(this, 3, b));
+        sendPacketToClient(getHost().getPacketForData(this, 3, b));
     }
 
 

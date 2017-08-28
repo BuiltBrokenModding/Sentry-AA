@@ -9,21 +9,21 @@
     "states": [
       {
         "id": "item.inventory",
-        "renderType":"item",
-        "textureID": "sentryaa:fofStationItem"
+        "renderType": "item",
+        "textureID": "sentryaa:fofstation"
       },
       {
         "id": "tile",
-        "renderType":"model",
+        "renderType": "model",
         "modelID": "sentryaa:fofstation",
-        "textureID": "sentryaa:fofstation",
+        "textureID": "sentryaa:fofstationmodel",
         "offset": {
           "y": 0.4375
         }
       },
       {
         "id": "tile.north",
-        "renderType":"model",
+        "renderType": "model",
         "parent": "tile",
         "rotation": {
           "yaw": 90
@@ -31,7 +31,7 @@
       },
       {
         "id": "tile.south",
-        "renderType":"model",
+        "renderType": "model",
         "parent": "tile",
         "rotation": {
           "yaw": -90
@@ -39,7 +39,7 @@
       },
       {
         "id": "tile.west",
-        "renderType":"model",
+        "renderType": "model",
         "parent": "tile",
         "rotation": {
           "yaw": 180
@@ -47,7 +47,7 @@
       },
       {
         "id": "tile.east",
-        "renderType":"model",
+        "renderType": "model",
         "parent": "tile",
         "rotation": {
           "yaw": 0
@@ -55,15 +55,14 @@
       }
     ]
   },
-  "texture":
-  {
-    "key":"sentryaa:fofStationItem",
+  "texture:0": {
+    "key": "sentryaa:fofstation",
     "domain": "sentryaa",
     "name": "fofstation",
-    "type": "item"
+    "type": "block"
   },
   "texture:1": {
-    "key": "sentryaa:fofstation",
+    "key": "sentryaa:fofstationmodel",
     "domain": "sentryaa",
     "name": "console-fof",
     "type": "model"

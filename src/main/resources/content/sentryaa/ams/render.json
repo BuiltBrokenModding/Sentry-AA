@@ -9,7 +9,10 @@
       {
         "id": "item.inventory",
         "renderType":"item",
-        "textureID": "sentryaa:ams"
+        "texture": {
+          "domain": "sentryaa",
+          "name": "turret_aa"
+        }
       },
       {
         "id": "entity.sentry.yaw",
@@ -36,12 +39,6 @@
         }
       }
     ]
-  },
-  "texture": {
-    "key": "sentryaa:ams",
-    "domain": "sentryaa",
-    "name": "turret_aa",
-    "type": "item"
   },
   "texture:1": {
     "key": "sentryaa:ams-model",
