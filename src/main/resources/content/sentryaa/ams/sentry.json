@@ -5,6 +5,7 @@
   "sentry": {
     "name": "sentry.ams",
     "id": "sentryaa:sentry.ams",
+    "creativeTab": "sentryaa",
     "gunID": "sentryaa:sentry.ams",
     "healthValue": 40,
     "bodyWidth": 0.8,
