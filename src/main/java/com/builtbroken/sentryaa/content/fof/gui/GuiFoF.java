@@ -19,7 +19,7 @@ import java.awt.*;
  */
 public class GuiFoF extends GuiContainerBase
 {
-    protected final TileFoF fof;
+    public final TileFoF fof;
 
     public String message = "default";
 

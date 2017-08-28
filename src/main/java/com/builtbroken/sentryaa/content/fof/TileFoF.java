@@ -68,7 +68,6 @@ public class TileFoF extends TileMachineNode implements IGuiTile, IFoFProvider, 
         return new ExternalInventory(this, 0);
     }
 
-
     @Override
     public void firstTick()
     {
@@ -113,6 +112,25 @@ public class TileFoF extends TileMachineNode implements IGuiTile, IFoFProvider, 
     }
 
     @Override
+    protected void writeGuiPacket(EntityPlayer player, ByteBuf buf)
+    {
+        ByteBufUtils.writeUTF8String(buf, getProvidedFoFTag());
+    }
+
+    @Override
+    protected void readGuiPacket(EntityPlayer player, ByteBuf buf)
+    {
+        if (isClient())
+        {
+            GuiScreen screen = Minecraft.getMinecraft().currentScreen;
+            if (screen instanceof GuiFoF && ((GuiFoF) screen).fof == this)
+            {
+                ((GuiFoF) screen).updateFoFIDField(ByteBufUtils.readUTF8String(buf));
+            }
+        }
+    }
+
+    @Override
     public boolean read(ByteBuf buf, int id, EntityPlayer player, PacketType type)
     {
         if (!super.read(buf, id, player, type))
@@ -138,8 +156,8 @@ public class TileFoF extends TileMachineNode implements IGuiTile, IFoFProvider, 
                     }
                     return true;
                 }
-                //Enable permission system, GuiSettings
-                else if (id == 3)
+                //Permission packet
+                else if(id == 3)
                 {
                     if (hasNode(player, Permissions.machineConfigure.toString()))
                     {
@@ -190,11 +208,6 @@ public class TileFoF extends TileMachineNode implements IGuiTile, IFoFProvider, 
                         {
                             gui.message = "";
                         }
-                        return true;
-                    }
-                    else if (id == 3)
-                    {
-                        gui.updateFoFIDField(ByteBufUtils.readUTF8String(buf));
                         return true;
                     }
                 }
@@ -259,14 +272,6 @@ public class TileFoF extends TileMachineNode implements IGuiTile, IFoFProvider, 
         sendPacketToClient(getHost().getPacketForData(this, 3, b));
     }
 
-
-    public void doUpdateGuiUsers()
-    {
-        if (userFoFID != null)
-        {
-            sendPacketToGuiUsers(getHost().getPacketForData(3, userFoFID));
-        }
-    }
 
     protected void initProfile()
     {
