@@ -28,7 +28,7 @@ public class TileWrappedFoF extends TileEntityWrapper implements IMultiTileHost
 	}
 
 	//============================
-	//==Methods:MultiBlockWrapped
+	//==Methods:MultiBlock
 	//============================
 
 
