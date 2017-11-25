@@ -59,7 +59,7 @@
     "key": "sentryaa:fofstation",
     "domain": "sentryaa",
     "name": "fofstation",
-    "type": "block"
+    "type": "item"
   },
   "texture:1": {
     "key": "sentryaa:fofstationmodel",
